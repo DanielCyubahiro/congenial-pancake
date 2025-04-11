@@ -54,7 +54,7 @@ export default class FullList implements List {
   }
 
   deleteItem(id: string): void {
-    this._list.filter((item: ListItem) => item.id !== id);
+    this._list = this._list.filter((item: ListItem) => item.id !== id);
     this.save();
   }
 }
